@@ -19,6 +19,9 @@ body
   margin: 0 auto
   display: block
   box-sizing: border-box
+  &_flex
+    display: flex
+    justify-content: space-between
 
 .search
   font-size: 0
@@ -210,3 +213,48 @@ a
     color: #777777
   &__creator:first-child
     margin-right: 30px
+
+.lookbook
+  display: flex
+  width: 663px
+  background-color: #f8f8f8
+  text-align: right
+  justify-content: space-between
+  padding-top: 43px
+  box-sizing: border-box
+  margin-bottom: 125px
+  margin-top: 62px
+  &:first-child
+    padding-left: 39px
+  &:last-child
+    padding-left: 39px
+  &__content
+    margin-right: 57px
+    width: 294px
+  &__header
+    color: #575153
+    font-size: 45px
+    font-weight: 700
+    letter-spacing: 2.4px
+    margin-top: 90px
+    span
+      font-weight: 300
+  &__p
+    color: #727272
+    display: inline-block
+    font-family: Roboto, sans-serif
+    font-size: 15px
+    font-weight: 400
+    line-height: 22px
+    margin-top: 25px
+  &__button
+    color: #454647
+    font-size: 16px
+    font-weight: 400
+    letter-spacing: 3.2px
+    box-sizing: border-box
+    line-height: 59px
+    background-color: #f8f8f8
+    border: 2px solid #737373
+    padding: 0 33px
+    margin-top: 30px
