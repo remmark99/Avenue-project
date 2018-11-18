@@ -1,0 +1,445 @@
+$width: 1280px
+
+*
+  margin: 0
+  padding: 0
+  font-family: Montserrat, sans-serif
+
+html, body
+  height: 100%
+
+body
+  display: flex
+  flex-direction: column
+  .content
+    flex: 1
+
+.container
+  max-width: $width
+  margin: 0 auto
+  padding: 0 9rem
+  
+  &_flex
+    display: flex
+    justify-content: space-between
+  &__nav
+    display: flex
+    justify-content: space-between
+
+.search
+  font-size: 0
+  padding-top: 38px
+  &__input
+    height: 30px
+    padding: 0 10px
+    border: 1px solid #e7e7e7
+    box-sizing: border-box
+    background-color: transparent
+    border-right: none
+    outline: none
+    width: 154px
+  &__button
+    height: 30px
+    box-sizing: border-box
+    background-color: transparent
+    border: 1px solid #e7e7e7
+    border-left: none
+    padding-right: 11px
+    outline: none
+    cursor: pointer
+
+.product
+  position: relative
+  letter-spacing: 1.05px
+  &__price
+    color: #9a9a9a
+    font-size: 21px
+    font-weight: 300
+    position: absolute
+    top: 15px
+    left: 15px
+    &_old
+      display: inline-block
+      text-decoration: line-through
+      margin-right: 15px
+  &__sub
+    letter-spacing: 1.05px
+    position: relative
+    top: -7px
+    font-size: 10px
+  &__hover
+    position: absolute
+    width: 100%
+    top: 0
+    box-shadow: 0 0 10px rgba(0,0,0,0.5)
+    visibility: hidden
+  &__top
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+  &__images
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    img
+      padding-right: 16px
+      padding-top: 16px
+  &__info
+    text-align: center
+    color: white
+    font-size: 48px
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.13)
+    padding-top: 71px
+  &__bottom
+    text-align: center
+    padding: 20px 35px
+    box-sizing: border-box
+    border-top: 1px solid #eee
+    background-color: #fff
+    margin-top: 145px
+  &__name
+    color: #727272
+    font-size: 13px
+    font-weight: 400
+  &__description
+    color: #8e8c8c
+    font-family: Roboto, sans-serif
+    font-size: 14px
+    font-weight: 400
+    padding-top: 15px
+  &__icons
+    padding-top: 15px
+    i
+      padding: 6px
+      border-radius: 50%
+      background-color: #727272
+      color: white
+      &:hover
+        background-color: #00c8c8
+        cursor: pointer
+  &:hover &__hover
+    visibility: visible
+    z-index: 1
+
+a
+  text-decoration: none
+
+.header
+  background-color: #333
+  height: 45px
+  &__container
+    height: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+  
+  &__price
+    color: #777777
+    font-size: 13px
+    font-weight: 400
+  &__link
+    color: #999999
+    font-size: 13px
+    font-weight: 400
+    line-height: 20px
+    &:first-child
+      margin-right: 20px
+  &__shopping-cart
+    margin-left: 82px
+    display: inline-block
+    background-color: #00c8c8
+    line-height: 46px
+    padding: 0 23px
+    color: #ffffff
+    font-size: 13px
+    font-weight: 400
+    i:first-child
+      margin-right: 22px
+      font-size: 17px
+    i:last-child
+      margin-left: 10px
+
+.index
+  position: relative
+  height: 919px
+  background-color: #f8f8f8
+  &__nav
+    top: 0
+    position: absolute
+  &__container
+    background: url(img/index-main.png) 230px no-repeat #f8f8f8
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+  &__heading
+    color: #575153
+    font-size: 450px
+    font-weight: 700
+    letter-spacing: 190px
+
+.nav
+  box-sizing: border-box
+  padding: 0 136px
+  display: flex
+  justify-content: space-between
+  height: 112px
+  &__right
+    display: flex
+  &__logo
+    color: #222222
+    font-size: 24px
+    font-weight: 400
+    letter-spacing: 1.2px
+    padding-top: 38px
+    span
+      font-weight: 700
+  &__menu
+    margin-top: 46px
+    margin-right: 115px
+  &__link
+    font-size: 13px
+    font-weight: 400
+    line-height: 20px
+    color: #222
+    &:hover
+      color: #00c8c8
+    &:not(:last-child)
+      margin-right: 30px
+
+.products
+  margin-top: 60px
+  &__ul
+    display: flex
+    list-style-type: none
+    border-top: 1px solid #eee
+    padding-top: 50px
+    padding-bottom: 60px
+    margin: 0 140px
+  &__li
+    color: #727272
+    font-size: 13px
+    font-weight: 400
+    margin-right: 55px
+  &__grid
+    display: grid
+    grid-template-columns: repeat(4, 420px)
+    grid-template-rows: 500px 174px 500px
+    grid-column-gap: 30px
+    grid-row-gap: 30px
+    margin: 0 140px
+    padding-bottom: 60px
+    border-bottom: 1px solid #eee
+  &__item
+    background-color: #f8f8f8
+  &__item:nth-child(3)
+    grid-column: 3 / 5
+    grid-row: 1 / 3
+    text-align: center
+    .product__bottom
+      margin-top: 349px
+    .product__icons
+      margin-top: 18px
+  &__item:nth-child(4)
+    grid-column: 1 / 3
+    grid-row: 2 / 4
+    text-align: center
+    .product__bottom
+      margin-top: 349px
+    .product__icons
+      margin-top: 18px
+
+.footer
+  display: grid
+  &__top
+    background-color: #f8f8f8
+  &__nav
+    display: flex
+    justify-content: space-between
+  &__ul
+    list-style-type: none
+  &__heading
+    color: #575153
+    font-size: 13px
+    font-weight: 400
+    line-height: 20px
+    margin-bottom: 30px
+    margin-top: 60px
+  &__li
+    margin-bottom: 10px
+    &:last-child
+      margin-bottom: 60px
+  &__link
+    display: block
+    color: #727272
+    font-size: 14px
+    font-weight: 300
+    &:hover 
+      color: #00C8C8
+  &__p
+    color: #727272
+    font-size: 14px
+    font-weight: 300
+  &__blocks
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-column-gap: 10px
+    margin-bottom: 56px
+  &__awards
+    background-color: #333
+    text-align: center
+    padding: 60px 55px
+    h3
+      color: #ffffff
+      font-size: 36px
+      font-weight: 700
+      letter-spacing: 1.8px
+    h3:last-child
+      font-weight: 300
+  &__external
+    font-size: 36px
+    background-color: #00c8c8
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+  &__external-link
+    display: block
+    text-align: text-center
+    padding: 150px 40px
+    color: white
+    &:last-child
+      margin-right: 148px
+    &:first-child
+      margin-left: 148px
+  &__bottom
+    background-color: #333
+    line-height: 45px
+  &__container_bottom
+    display: flex
+    justify-content: space-between
+    font-size: 13px
+    font-weight: 400
+    padding: 0 441px
+  &__copyright
+    color: #999999
+  &__creators
+    display: flex
+    color: #777777
+  &__creator:first-child
+    margin-right: 30px
+
+.lookbook
+  display: flex
+  width: 663px
+  background-color: #f8f8f8
+  text-align: right
+  justify-content: space-between
+  padding-top: 43px
+  box-sizing: border-box
+  margin-bottom: 125px
+  margin-top: 62px
+  &:first-child
+    padding-left: 39px
+  &:last-child
+    padding-left: 39px
+  &__content
+    margin-right: 57px
+    width: 294px
+  &__header
+    color: #575153
+    font-size: 45px
+    font-weight: 700
+    letter-spacing: 2.4px
+    margin-top: 90px
+    span
+      font-weight: 300
+  &__p
+    color: #727272
+    display: inline-block
+    font-family: Roboto, sans-serif
+    font-size: 15px
+    font-weight: 400
+    line-height: 22px
+    margin-top: 25px
+  &__button
+    color: #454647
+    font-size: 16px
+    font-weight: 400
+    letter-spacing: 3.2px
+    box-sizing: border-box
+    line-height: 59px
+    background-color: #f8f8f8
+    border: 2px solid #737373
+    padding: 0 33px
+    margin-top: 30px
+
+.brand
+  margin-bottom: 120px
+  &__container
+    max-width: $width
+  &__image
+    background-image: url("img/brand-top.png")
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding: 150px 0
+    margin-bottom: 60px
+  &__heading
+    color: #ffffff
+    font-size: 48px
+    font-weight: 300
+    letter-spacing: 2.4px
+    margin-bottom: 37px
+    span
+      font-weight: 700
+    &_padding_60
+      padding-top: 60px
+    &_size_m
+      color: #575153
+      font-size: 18px
+      font-weight: 400
+      margin-bottom: 25px
+      letter-spacing: normal
+    &_size_s
+      color: #727272
+      font-size: 13px
+      font-weight: 400
+      text-transform: uppercase
+      margin-bottom: 15px
+      letter-spacing: normal
+  &__slogan
+    color: #ffffff
+    font-size: 30px
+    font-weight: 400
+    letter-spacing: 1.5px
+  &__text
+    color: #8e8c8c
+    font-family: Roboto, sans-serif
+    font-size: 15px
+    font-weight: 400
+    line-height: 22px
+    overflow: hidden
+    a
+      color: #00c8c8
+      font-family: Roboto, sans-serif
+    &_margin_60
+      margin-bottom: 60px
+    &_last
+      width: 570px
+  &__picture1
+    float: left
+    margin-right: 30px
+    margin-bottom: 62px
+  &__picture2
+    float: right
+    margin-bottom: 25px
+  &__picture3
+    float: left
+    margin-right: 30px
+  &__awards
+    float: right
+    display: flex
+    width: 570px
+    justify-content: space-between
+    margin-top: -100px
