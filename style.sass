@@ -25,10 +25,10 @@ body
   &__nav
     display: flex
     justify-content: space-between
+    padding: 35px 136px 55px 136px
 
 .search
   font-size: 0
-  padding-top: 38px
   &__input
     height: 30px
     padding: 0 10px
@@ -185,8 +185,6 @@ a
 .nav
   box-sizing: border-box
   padding: 0 136px
-  display: flex
-  justify-content: space-between
   height: 112px
   &__right
     display: flex
@@ -195,12 +193,12 @@ a
     font-size: 24px
     font-weight: 400
     letter-spacing: 1.2px
-    padding-top: 38px
     span
       font-weight: 700
   &__menu
-    margin-top: 46px
     margin-right: 115px
+    display: flex
+    align-items: center
   &__link
     font-size: 13px
     font-weight: 400
@@ -377,18 +375,32 @@ a
     padding: 0 33px
     margin-top: 30px
 
+.image
+  background-image: url("img/brand-top.png"), url("img/brand.jpg")
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  padding: 150px 0
+  margin-bottom: 60px
+  &__heading
+    color: #ffffff
+    font-size: 48px
+    font-weight: 300
+    letter-spacing: 2.4px
+    margin-bottom: 37px
+    span
+      font-weight: 700
+  &__slogan
+    color: #ffffff
+    font-size: 30px
+    font-weight: 400
+    letter-spacing: 1.5px
+
 .brand
   margin-bottom: 120px
   &__container
     width: 1170px
-  &__image
-    background-image: url("img/brand-top.png"), url("img/brand.jpg")
-    display: flex
-    justify-content: center
-    align-items: center
-    flex-direction: column
-    padding: 150px 0
-    margin-bottom: 60px
   &__heading
     color: #ffffff
     font-size: 48px
@@ -412,11 +424,6 @@ a
       text-transform: uppercase
       margin-bottom: 15px
       letter-spacing: normal
-  &__slogan
-    color: #ffffff
-    font-size: 30px
-    font-weight: 400
-    letter-spacing: 1.5px
   &__text
     color: #8e8c8c
     font-family: Roboto, sans-serif
@@ -447,3 +454,74 @@ a
     width: 570px
     justify-content: space-between
     margin-top: -100px
+
+.local
+  &__addresses
+    width: 1170px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    padding-bottom: 60px
+  &__city
+    color: #575153
+    font-size: 18px
+    font-weight: 400
+    padding-bottom: 25px
+  &__street
+    color: #727272
+    font-size: 13px
+    font-weight: 400
+    padding-bottom: 15px
+  &__description
+    color: #8e8c8c
+    font-family: Roboto, sans-serif
+    font-size: 15px
+    font-weight: 400
+    line-height: 22px
+  &__figure
+    margin-bottom: 124px
+  &__map
+    vertical-align: bottom
+  &__info
+    padding: 40px
+  &__container
+    background-color: #f8f8f8
+  &__detail
+    color: #8e8c8c
+    font-size: 15px
+    font-weight: 400
+    line-height: 30px
+    margin-bottom: 5px
+    &:nth-child(4)
+      margin-top: 25px
+  &__icon
+    display: inline-block
+    padding-top: 3px
+    box-sizing: border-box
+    width: 30px
+    height: 30px
+    text-align: center
+    color: white
+    background-color: #727272
+    font-size: 18px
+    font-weight: 400
+    border-radius: 50%
+    border: 1px solid #727272
+    margin-top: 60px
+    margin-right: 10px
+  &__button
+    color: #454647
+    font-size: 16px
+    font-weight: 400
+    text-transform: uppercase
+    letter-spacing: 3.2px
+    line-height: 57px
+    padding: 0 34px
+    margin-top: 25px
+    background-color: #fff
+    border: 2px solid #737373
+    &:hover
+      background-color: #00c8c8
+      border-color: #00c8c8
+      color: white
+      cursor: pointer
