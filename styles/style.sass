@@ -7,6 +7,7 @@ $width: 1280px
 
 html, body
   height: 100%
+  width: 100%
 
 body
   display: flex
@@ -17,7 +18,7 @@ body
 .container
   max-width: $width
   margin: 0 auto
-  padding: 0 9rem
+  padding: 0 3rem
   
   &_flex
     display: flex
@@ -375,10 +376,11 @@ a
 
 .brand
   margin-bottom: 120px
-  &__container
-    max-width: $width
+  &__grid
+    display: grid
+    grid-template-columns: 1fr 1fr
   &__image
-    background-image: url("img/brand-top.png")
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/brand.jpg");
     display: flex
     justify-content: center
     align-items: center
@@ -428,18 +430,16 @@ a
     &_last
       width: 570px
   &__picture1
-    float: left
     margin-right: 30px
     margin-bottom: 62px
   &__picture2
-    float: right
     margin-bottom: 25px
   &__picture3
-    float: left
     margin-right: 30px
+    margin-bottom: 25px
   &__awards
-    float: right
-    display: flex
-    width: 570px
-    justify-content: space-between
-    margin-top: -100px
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    padding-top: 45px
+    grid-gap: 5px
+  
